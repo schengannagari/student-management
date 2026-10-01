@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: student-management
+Version: 1.0.0
+Summary: Scalable Student Management System (FastAPI + SQLAlchemy + SQLite)
+Requires-Python: >=3.11
+Requires-Dist: fastapi>=0.115
+Requires-Dist: uvicorn[standard]>=0.30
+Requires-Dist: sqlalchemy>=2.0
+Requires-Dist: alembic>=1.13
+Requires-Dist: pydantic[email]>=2.7
+Requires-Dist: pydantic-settings>=2.3
+Requires-Dist: pyjwt>=2.8
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: pytest-cov>=5; extra == "dev"
+Requires-Dist: httpx>=0.27; extra == "dev"
+Requires-Dist: ruff>=0.5; extra == "dev"
+Requires-Dist: mypy>=1.10; extra == "dev"

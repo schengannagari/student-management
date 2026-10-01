@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    ports: ["8000:8000"]
+    env_file: .env
+    environment:
+      SMS_DATABASE_URL: sqlite:////srv/data/sms.db
+      SMS_ENVIRONMENT: prod
+    volumes:
+      - sms-data:/srv/data
+    restart: unless-stopped
+volumes:
+  sms-data:
