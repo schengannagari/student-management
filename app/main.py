@@ -18,7 +18,17 @@ from app.db.session import optimize_db
 
 log = logging.getLogger("app")
 
-
+"""
+This is the main entry point for the FastAPI application.
+It sets up the application, including middleware, exception handlers,
+and routes. The application is configured to log requests and handle errors
+gracefully, returning structured JSON responses for errors.
+The `create_app` function initializes the FastAPI app with settings
+and middleware, while the `request_context` middleware adds a unique
+request ID to each request for tracking purposes.
+The application includes health check and API routes,
+and it optimizes the database on startup and shutdown. 
+"""
 def _error(status: int, code: str, message: str) -> JSONResponse:
     return JSONResponse(
         status_code=status,
