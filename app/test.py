@@ -1,3 +1,6 @@
+def __init__():
+    print("This is a test module.")
+
 def greet(name: str) -> str:
     return f"Hello, {name}!"
 
